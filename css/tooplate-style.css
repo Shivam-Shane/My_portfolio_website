@@ -6,30 +6,19 @@ https://www.tooplate.com/view/2115-marvel
 
 */
 
-
 @import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,700");
 body {
-  --webkit-user-drag: none; /* Safari/Chrome */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none;
   font-family: "Maven Pro", sans-serif;
   padding-top: 70px;
-
-}
-
-img {
-  -webkit-user-drag: none; /* Safari/Chrome */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
-
 
 .full-screen {
   padding: 8rem 0;
 }
-
 .small-text {
   color: #5b5b5b;
   font-size: 15px;
@@ -336,6 +325,7 @@ b, strong {
   color: #ffffff;
 }
 
+
 .timeline-wrapper {
   position: relative;
   padding: 22px 0;
@@ -351,6 +341,13 @@ b, strong {
   position: absolute;
   left: 38px;
 }
+
+.project-info img {
+  border-radius: 100px;
+  height: 100%;
+}
+
+
 
 .timeline-yr {
   background: #474559;
