@@ -588,7 +588,7 @@ input[readonly] {
   }
 
   .social-links li {
-    display: inline-block;
+    display: inline-block; 
     vertical-align: top;
-  }
+  } 
 }
