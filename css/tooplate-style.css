@@ -514,6 +514,33 @@ b, strong {
   margin-top: 5px;
 }
 
+.publication-header {
+  padding-top: 70px;
+  padding-bottom: 20px;
+}
+
+.publication-content p
+{
+  padding-top: 70px;
+  padding-bottom: 10px;
+}
+.publication-details {
+  background: #5ecae8;
+  border-radius: 100%;
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+}
+
+
+.publication-details span:hover{
+  display: inline-block;
+  font-size: 17px;
+  margin-top: 5px;
+}
+
 .dark-mode .content-skills,.dark-mode .content-vertical-skills,.dark-mode .content-education{
   background-color: #361818;
 }
