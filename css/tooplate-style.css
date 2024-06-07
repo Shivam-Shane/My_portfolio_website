@@ -347,10 +347,56 @@ b, strong {
   left: 38px;
 }
 
-.project-info img {
-  border-radius: 100px;
-  height: 100%;
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  
 }
+
+.project-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 35px;
+  
+}
+
+.project-info img {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  object-fit:fill; /* Ensures the image covers the entire area of the grid cell */
+  border-radius: 15px; /* Rounded corners for the images */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.project-item:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: top;
+}
+
 
 .timeline-yr {
   background: #474559;
@@ -558,11 +604,11 @@ b, strong {
 }
 .owl-carousel .owl-nav .owl-prev:before {
   content: '\e833';
-  left: -50px;
+  left: 200px;
 }
 .owl-carousel .owl-nav .owl-next:before {
   content: '\e836';
-  right: -50px;
+  right: 200px;
 }
 
 .owl-theme .owl-nav [class*=owl-] {
