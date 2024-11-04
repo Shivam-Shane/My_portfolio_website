@@ -199,6 +199,66 @@ h3, b, strong {
   margin-left: 5%;
   margin-right:1%
 }
+
+/* General styling for Experience */
+#experience {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+#experience h2 {
+  font-size: 2em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.experience-item {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.experience-item h3 {
+  font-size: 1.5em;
+  color: #0056b3;
+  margin: 0;
+}
+
+.experience-item h4 {
+  font-size: 1.2em;
+  color: #555;
+  margin: 5px 0;
+}
+
+.experience-item .date {
+  font-style: italic;
+  color: #888;
+  margin: 10px 0;
+}
+
+.experience-item ul {
+  margin: 10px 0;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #333;
+}
+
+.experience-item ul li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.experience-item ul li::marker {
+  color: #0056b3;
+}
+/* Experance ends here */
+
+
  /* PROJECT SHOWCASING */
 .project-grid {
   display: grid;
