@@ -8,26 +8,20 @@ document.getElementById("summarizeButton").addEventListener("click", async (even
   const apiEndpoint = "https://portfolio-summarizer-4pc8gexho-shivams-projects-c0a530a5.vercel.app/";
   const response = await fetch(`${apiEndpoint}?url=${encodeURIComponent(currentUrl)}`);
 
-if (response.ok) {
-  console.log("Request successful, but response is opaque.");
-  // No access to response body
-} else {
-  console.error("Failed to fetch.");
-}
+
 
 
   const modal = document.getElementById("summaryModal");
   const resultElement = document.getElementById("result");
+  if (response.ok) {
+    const result = await response.json();
+    resultElement.innerHTML = `<pre>${JSON.stringify(result.summary, null, 2)}</pre>`;
+    modal.style.display = "block"; // Show the modal
+  } else {
+    resultElement.innerText = "Error: Unable to fetch summary.";
+    modal.style.display = "block"; // Show the modal
+  }
 });
-//   if (response.ok) {
-//     const result = await response.json();
-//     resultElement.innerHTML = `<pre>${JSON.stringify(result.summary, null, 2)}</pre>`;
-//     modal.style.display = "block"; // Show the modal
-//   } else {
-//     resultElement.innerText = "Error: Unable to fetch summary.";
-//     modal.style.display = "block"; // Show the modal
-//   }
-// });
 
 // Modal Close Logic
 document.querySelector(".close").addEventListener("click", () => {
