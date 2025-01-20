@@ -4,6 +4,7 @@ body {
   margin: 0; /* Remove default margins */
   padding: 0; /* Remove default padding */
   overflow-x: hidden; /* Prevent horizontal scroll */
+  
 }
 
 .full-screen {
@@ -185,13 +186,86 @@ h3, b, strong {
 .custom-btn:hover {
   color: #ffc200;
 }
+/* Summarize button */
 .custom-btn.custom-btn-bg {
   background: #474559;
   color: #ffffff;
 }
+/* Summarize button hover */
 .custom-btn.custom-btn-bg:hover {
-  background: #ffc200;
+  background: #2bb80e;
   color: #ffffff !important;
+}
+
+/* Summarize button Model */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  overflow: auto; /* Enable scroll if needed */
+  overflow-y: hidden;
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #f0e5e5;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%; /* Adjust width to ensure it fits within the viewport */
+  max-height: 70%; /* Constrain height to prevent overflow */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
+              rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+              rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
+              rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+              rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+              rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+              rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+              rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  text-align: left;
+  line-height: 1.5; /* Improve readability */
+  white-space: pre-wrap; /* Preserve line breaks while wrapping long text */
+  word-break: break-word; /* Break long unbreakable words */
+  box-sizing: border-box; /* Include padding in width/height */
+}
+
+/* Custom Scrollbars with !important */
+.modal-content::-webkit-scrollbar {
+  width: 8px !important; /* Force width of scrollbar */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: rgba(248, 9, 9, 0.5) !important; /* Color of the scrollbar thumb */
+  border-radius: 10px !important; /* Rounded corners for the scrollbar thumb */
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background-color: rgba(246, 9, 9, 0.1) !important; /* Color of the track */
+}
+
+
+.close {
+  color: #070000;
+  position: absolute; /* Position relative to the modal */
+  top: 10px; /* Adjust vertical spacing */
+  right: 45px; /* Adjust horizontal spacing */
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+}
+
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .about-container {
