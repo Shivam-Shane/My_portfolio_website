@@ -11,7 +11,7 @@ document.getElementById("summarizeButton").addEventListener("click", async (even
     try {
         // Making the API call to the production endpoint
         const response = await fetch(`${apiEndpoint}?url=${encodeURIComponent(currentUrl)}`);
-
+        console.log(response);
         const modal = document.getElementById("summaryModal");
         const resultElement = document.getElementById("result");
 
