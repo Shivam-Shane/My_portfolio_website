@@ -48,9 +48,12 @@ document.getElementById("summarizeButton").addEventListener("click", async (even
 
             // Generate formatted summary content
             const summary = result.summary;
+            console.log(summary)
+            console.log("susmmary role",summary.Role)
             const formattedSummary = `
                 <div class="summary-container">
                     <h3>Role</h3>
+                    
                     <p>${summary.Role || "No Role Available"}</p>
                     
                     <h3>Experience</h3>
