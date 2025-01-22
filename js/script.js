@@ -21,11 +21,14 @@ document.getElementById("summarizeButton").addEventListener("click", async (even
         if (response.ok) {
             const result = await response.json();  // Parse the JSON response from the API
 
-                      // Parse the Markdown string into HTML using the marked library
-          const htmlSummary = marked(markdownSummary);
+            // Extract the summary string (Markdown format)
+            const markdownSummary = result.summary;
 
-          // Insert the HTML content into the resultElement
-          resultElement.innerHTML = `<div style="white-space: pre-wrap; word-break: break-word;">${htmlSummary}</div>`;
+            // Parse the Markdown string into HTML using the marked library
+            const htmlSummary = marked(markdownSummary);
+
+            // Insert the HTML content into the resultElement
+            resultElement.innerHTML = `<div style="white-space: pre-wrap; word-break: break-word;">${htmlSummary}</div>`;
 
             // Hide the spinner and show the modal containing the summary
             spinner.style.display = "none";  // Hide the spinner now that the content is loaded
