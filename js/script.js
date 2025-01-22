@@ -1,13 +1,13 @@
 // Production code - Spinner element 
 const spinner = document.getElementById("spinner");  // Get the spinner element to show/hide during loading
 console.log("marked",marked); // Should log the marked function
-
+const content = document.getElementById("mainContent");
 // Add event listener to the summarize button
 document.getElementById("summarizeButton").addEventListener("click", async (event) => {
     event.preventDefault();  // Prevent default behavior of anchor tag (which would cause a page reload)
     spinner.style.display = "block";  // Show the spinner until the response is received
     const currentUrl = window.location.href;  // Get the current portfolio page URL
-
+    content.classList.add("blur");
     // Production API endpoint for fetching summary
     const apiEndpoint = "https://portfolio-summarizer-4pc8gexho-shivams-projects-c0a530a5.vercel.app/";
 
@@ -33,11 +33,13 @@ document.getElementById("summarizeButton").addEventListener("click", async (even
 
             // Hide the spinner and show the modal containing the summary
             spinner.style.display = "none";  // Hide the spinner now that the content is loaded
+            content.classList.remove("blur");
             modal.style.display = "block";  // Show the modal with the summary content
         } else {
             // If the API response is not successful, show an error message
             resultElement.innerText = "Error: Unable to fetch summary.";
             spinner.style.display = "none";  // Hide the spinner
+            content.classList.remove("blur");
             modal.style.display = "block";  // Show the modal with error message
         }
     } catch (error) {
@@ -47,6 +49,7 @@ document.getElementById("summarizeButton").addEventListener("click", async (even
         const resultElement = document.getElementById("result");
         resultElement.innerText = "Error: Unable to fetch summary.";  // Show error message
         spinner.style.display = "none";  // Hide the spinner
+        content.classList.remove("blur");
         modal.style.display = "block";  // Show the modal with error message
     }
 });
@@ -54,6 +57,7 @@ document.getElementById("summarizeButton").addEventListener("click", async (even
 // Modal close logic - Close the modal when the close button is clicked
 document.querySelector(".close").addEventListener("click", () => {
   document.getElementById("summaryModal").style.display = "none";  // Hide the modal when close button is clicked
+  content.classList.remove("blur");
 });
 
 // Close Modal when clicking outside of content (click outside the modal)
@@ -61,5 +65,6 @@ window.addEventListener("click", (event) => {
   const modal = document.getElementById("summaryModal");
   if (event.target == modal) {
     modal.style.display = "none";  // Hide the modal if the user clicks outside the modal content
+    content.classList.remove("blur");
   }
 });

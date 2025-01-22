@@ -248,7 +248,7 @@ h3, b, strong {
   width: 50px;
 }
 .loader:before, .loader:after 
-{ border-radius: 50%;
+{ border-radius: 100%;
    content: ""; 
    display: block;
    height: 20px;
@@ -259,15 +259,15 @@ h3, b, strong {
  {
    animation: ball1 1s infinite;
     background-color: #0eea50;
-     box-shadow: 30px 0 0 #ff3d00;
+     box-shadow: 30px 0 0 #ffc200;
       margin-bottom: 10px;
      }
      
 .loader:after 
 {
  animation: ball2 1s infinite; 
- background-color: #ff3d00; box-shadow: 
- 30px 0 0 #0eea50; } 
+ background-color: #ffc200; box-shadow: 
+ 30px 0 0 #ffc200; } 
  
  @keyframes rotate 
  { 0% 
@@ -276,15 +276,19 @@ h3, b, strong {
    100% { transform: rotate(720deg) scale(0.8) } 
   } 
 @keyframes ball1 
-{ 0% { box-shadow: 30px 0 0 #ff3d00; } 50% 
-{ box-shadow: 0 0 0 #ff3d00; margin-bottom: 0; transform: translate(15px, 15px); } 100% 
-{ box-shadow: 30px 0 0 #ff3d00; margin-bottom: 10px; } } 
+{ 0% { box-shadow: 30px 0 0 #ffc200; } 50% 
+{ box-shadow: 0 0 0 #ffc200; margin-bottom: 0; transform: translate(15px, 15px); } 100% 
+{ box-shadow: 30px 0 0 #ffc200; margin-bottom: 10px; } } 
 
 @keyframes ball2 { 0% { box-shadow: 30px 0 0 #0eea50; } 50% 
 { box-shadow: 0 0 0 #0eea50; margin-top: -20px; transform: translate(15px, 15px); }
  100% { box-shadow: 30px 0 0 #0eea50; margin-top: 0; } }
 
-
+/* Add blur effect when loader is active */
+.blur {
+  filter: blur(5px);
+  pointer-events: none; /* Disable interactions while blurred */
+}
 
 /* Modal adjustments */
 .modal-content {
