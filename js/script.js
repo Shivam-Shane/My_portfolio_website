@@ -17,7 +17,7 @@ document.getElementById("summarizeButton").addEventListener("click", async (even
 
         if (response.ok) {
             const result = await response.json();
-
+            console.log(result);
             // Function to create a list of items (e.g., Achievements, Skills, etc.)
             const createList = (items) => {
                 return `<ul>${items.map(item => `<li>${item}</li>`).join('')}</ul>`;
