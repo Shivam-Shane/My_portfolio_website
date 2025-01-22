@@ -1,5 +1,6 @@
 // Production code - Spinner element 
 const spinner = document.getElementById("spinner");  // Get the spinner element to show/hide during loading
+console.log("marked",marked); // Should log the marked function
 
 // Add event listener to the summarize button
 document.getElementById("summarizeButton").addEventListener("click", async (event) => {
