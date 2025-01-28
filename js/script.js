@@ -9,7 +9,7 @@ document.getElementById("summarizeButton").addEventListener("click", async (even
     const currentUrl = window.location.href;  // Get the current portfolio page URL
     content.classList.add("blur");
     // Production API endpoint for fetching summary
-    const apiEndpoint = "https://portfolio-summarizer-4pc8gexho-shivams-projects-c0a530a5.vercel.app/";
+    const apiEndpoint = "https://portfolio-summarizer-2lzx8tew9-shivams-projects-c0a530a5.vercel.app/";
 
     try {
         // Make the API call using the Fetch API and append the current URL as a query parameter
