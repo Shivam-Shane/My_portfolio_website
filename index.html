@@ -14,12 +14,36 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/tooplate-style.css">
+    <link rel="stylesheet" href="css/chatbot.css">
     
   </head>
   <body>
     <div class="spinner-container" id="spinner">
       <span class="loader" ></span>
     </div>
+      <!-- Chat Icon -->
+  <div class="chat-icon" onclick="toggleChatPopup()">
+    <img src="https://cdn-icons-png.flaticon.com/512/134/134914.png" alt="Chat Icon">
+  </div>
+
+  <!-- Chat Popup -->
+  <div class="chat-popup" id="chatPopup">
+    <div class="chat-header">
+      Chat with Us!
+      <button class="close-btn" onclick="toggleChatPopup()">×</button>
+    </div>
+    <div class="chat-container">
+      <div class="chat-box" id="chatBox">
+        <div class="chat-message bot-message">Hello! I can help you get crucial information in less time</div>
+      </div>
+      <div class="user-input-container">
+        <input type="text" id="userInput" class="user-input" placeholder="Type your message...">
+        <button onclick="sendMessage()" class="send-btn">Send</button>
+      </div>
+    </div>
+  </div>
+
+
 <div id="mainContent">
 <section class="navbar-section" id="navbar-section">
   <div class="navbar">
@@ -479,6 +503,7 @@
     <script src="js/smoothscroll.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="js/script.js"></script>  <!-- CUSTOM SCRIPT -->  <!-- JAVASCRIPT FILES -->
+    <script src="js/chatbot.js"></script>
    
 
     <!-- JAVASCRIPT FILES ENDS-->
