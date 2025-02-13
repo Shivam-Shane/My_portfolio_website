@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function sendLocationToGoogleSheets(locationData) {
-    let scriptURL = "https://script.google.com/macros/s/AKfycbwcbe_UUFPirakIuNg70Er7-qLdhihnNAOEGoMAB4EWDCWQuUB7-t0mUd0SjdeVNILjfw/exec"; // Replace with your Apps Script URL
+    let scriptURL = "https://script.google.com/macros/s/AKfycbzl8jN2GdBDgUixz44HRUSIQklis9y5SmnJ2GcUdqDqt7f2hPpHJGX0pQS8xfuPDdMWZg/exec"; // Replace with your Apps Script URL
     
     fetch(scriptURL, {
         method: "POST",
@@ -52,6 +52,6 @@ function sendLocationToGoogleSheets(locationData) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(locationData)
     })
-    .then(() => console.log("Location sent to Google Sheets for", locationData.siteName))
+    .then(() => console.log("Location sent"))
     .catch(error => console.error("Error sending location:", error));
 }
