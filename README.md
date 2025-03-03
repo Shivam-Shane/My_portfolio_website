@@ -58,6 +58,6 @@ Help us continue developing and improving this project by either making a donati
 
 ### Follow me on Social Media: 
 
-Stay updated with our latest work by following me on LinkedIn at https://www.linkedin.com/in/shivam-2641081a0/
+Stay updated with our latest work by following me on LinkedIn at [https://www.linkedin.com/in/shivam-2641081a0/](https://www.linkedin.com/in/shivam-hireme/)
 
 Buying Me a Book: https://buymeacoffee.com/shivamshane
